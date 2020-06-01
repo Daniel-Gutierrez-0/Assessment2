@@ -111,11 +111,6 @@ namespace Assessment2
             myFormQ5.ShowDialog();
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             //Shows Help windows

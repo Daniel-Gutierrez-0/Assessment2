@@ -59,15 +59,5 @@ namespace Assessment2.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cd628b20_32d8_4084_8947_e843f8daf496 {
-            get {
-                object obj = ResourceManager.GetObject("cd628b20-32d8-4084-8947-e843f8daf496", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

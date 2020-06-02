@@ -10,6 +10,7 @@
 
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,11 +22,19 @@ using System.Windows.Forms;
 using System.IO; //Required for file operations
 
 
+
+
+
 namespace Assessment2
 {
     public partial class FormQ5 : Form
     {
-        private StreamReader fileReader;      //Reads data to a text file
+        //Reads data to a text file
+        private StreamReader fileReader;
+        //Array of Class Person
+        ArrayList myCollection = new ArrayList();
+        //Variable for reading file
+        string fileName,sortType;
 
         public FormQ5()
         {
@@ -33,19 +42,22 @@ namespace Assessment2
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        //Creating class
+        public class Person:IComparable
         {
-            this.Close();
+            public string name;
+            public int age;
+            public double hight;
+
+            public int CompareTo(object obj)
+            {
+                Person other = (Person)obj;
+                    return this.age - other.age;    
+            }
         }
-
-
-        //Declaring variables
-        string fileName;
-        int[] myArraySort = new int[4];
 
         public void readFile()
         {
-
             //Set filter for open file dialog
             dlgOpen.Filter = "Text files (*.txt)|*.txt";
 
@@ -66,43 +78,54 @@ namespace Assessment2
                 String inputRecord = fileReader.ReadLine();
 
                 if (inputRecord != null)
-                { //Not end‐of‐file                  
+                { //Not end‐of‐file
+                    string[] inputFields; //Will store individual pieces of data 
+                    inputFields = inputRecord.Split(','); //Specifies comma as the delimiter between fields
+                    string newName = inputFields[0];
+                    int newAge = Convert.ToInt32(inputFields[1]);
+                    double newHight = Convert.ToDouble(inputFields[2]);
 
-                    myArraySort[i] = Convert.ToInt32(inputRecord);
-
+                    //CREATING OBJECT AND ADDING DATA PERO OBJECT
+                    myCollection.Add(new Person()
+                    {
+                        name = newName,
+                        age = newAge,
+                        hight = newHight
+                    });
                 }
                 else
                     MessageBox.Show("Line is empty.");  //shows message
             }
-
-            //Refreshing list
-            refreshList();
-
-            //Displaying information for user: enable/disable buttons and showing messages
-            lblAddress.Text = fileName;//Displays file's address
         }
-
-
-        public void refreshList()
-        {
-            lstBox.Items.Clear(); //Clearing list box
-
-            //Adding data to listbox
-            for (int i = 0; i < 4; i++)
-                lstBox.Items.Add(myArraySort[i]);
-        }
-
 
         private void btnFile_Click(object sender, EventArgs e)
         {
             readFile();
-
             refreshList();
-
             //Displaying information for user: enable/disable buttons and showing messages
+            lblAddress.Text = fileName;//Displays file's address
             btnFile.Enabled = false;
             btnSort.Enabled = true;
+        }
 
+        public void refreshList()
+        {
+            lstBox.Items.Clear(); //Clearing list box
+            foreach (Person rec in myCollection)
+                lstBox.Items.Add(rec.name + " age: " + rec.age + " hight: " + rec.hight);
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            myCollection.Sort();
+            refreshList();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
+
+

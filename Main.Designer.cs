@@ -37,6 +37,8 @@
             this.qestion5ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.question6ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.question7ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +70,9 @@
             this.question2ToolStripMenuItem,
             this.question3ToolStripMenuItem,
             this.question4ToolStripMenuItem,
-            this.qestion5ToolStripMenuItem});
+            this.qestion5ToolStripMenuItem,
+            this.question6ToolStripMenuItem,
+            this.question7ToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -77,28 +81,28 @@
             // question2ToolStripMenuItem
             // 
             this.question2ToolStripMenuItem.Name = "question2ToolStripMenuItem";
-            this.question2ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.question2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.question2ToolStripMenuItem.Text = "Question #2";
             this.question2ToolStripMenuItem.Click += new System.EventHandler(this.question2ToolStripMenuItem_Click);
             // 
             // question3ToolStripMenuItem
             // 
             this.question3ToolStripMenuItem.Name = "question3ToolStripMenuItem";
-            this.question3ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.question3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.question3ToolStripMenuItem.Text = "Question #3";
             this.question3ToolStripMenuItem.Click += new System.EventHandler(this.question3ToolStripMenuItem_Click);
             // 
             // question4ToolStripMenuItem
             // 
             this.question4ToolStripMenuItem.Name = "question4ToolStripMenuItem";
-            this.question4ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.question4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.question4ToolStripMenuItem.Text = "Question #4";
             this.question4ToolStripMenuItem.Click += new System.EventHandler(this.question4ToolStripMenuItem_Click);
             // 
             // qestion5ToolStripMenuItem
             // 
             this.qestion5ToolStripMenuItem.Name = "qestion5ToolStripMenuItem";
-            this.qestion5ToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.qestion5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.qestion5ToolStripMenuItem.Text = "Question #5";
             this.qestion5ToolStripMenuItem.Click += new System.EventHandler(this.question5ToolStripMenuItem_Click);
             // 
@@ -119,6 +123,19 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // question6ToolStripMenuItem
+            // 
+            this.question6ToolStripMenuItem.Name = "question6ToolStripMenuItem";
+            this.question6ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.question6ToolStripMenuItem.Text = "Question #6";
+            this.question6ToolStripMenuItem.Click += new System.EventHandler(this.question6ToolStripMenuItem_Click);
+            // 
+            // question7ToolStripMenuItem
+            // 
+            this.question7ToolStripMenuItem.Name = "question7ToolStripMenuItem";
+            this.question7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.question7ToolStripMenuItem.Text = "Question #7";
             // 
             // Main
             // 
@@ -150,6 +167,8 @@
         private System.Windows.Forms.ToolStripMenuItem question3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem question4ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem qestion5ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem question6ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem question7ToolStripMenuItem;
     }
 }
 

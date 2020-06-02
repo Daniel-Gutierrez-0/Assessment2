@@ -79,16 +79,15 @@ namespace Assessment2
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" Author: Daniel Gutierrez CIT210097. Copyright 2020", "Assessment 2");  //shows message
+            //Show message
+            MessageBox.Show(" Author: Daniel Gutierrez CIT210097. Copyright 2020", "Assessment 2");  
         }
 
         private void question2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             //frmCustomer is the (name) in its properties
             FormQ2 myFormQ2 = new FormQ2();
             myFormQ2.ShowDialog();
-
         }
 
         private void question3ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,6 +114,12 @@ namespace Assessment2
         {
             //Shows Help windows
             Help.ShowHelp(this, AppDomain.CurrentDomain.BaseDirectory+"\\help.chm", HelpNavigator.Topic);
+        }
+
+        private void question6ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Show message
+            MessageBox.Show(" Author: Daniel Gutierrez CIT210097. Copyright 2020", "Assessment 2");
         }
     }
 }
